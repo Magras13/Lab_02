@@ -171,8 +171,10 @@ int main() {
     cout << "Enter the number of cities\n";
     cin >> k;
 
-    if (k < 4 || k > 6)
-        cout << "Inappropriate n";
+    if (k < 4 || k > 6){
+      cout << "Inappropriate n";
+      return 0 ;
+    }
 
     int distance[6][6];
     cout << "Enter the distances of roads betwen cities\n";
