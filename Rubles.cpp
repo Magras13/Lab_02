@@ -20,11 +20,21 @@ int main() {
     else
         A -= (rub_5 - five) * 5;
 
+    if (A == 0) {
+        cout << "YES";
+        return 0;
+    }
+        
     int two = A / 2;
     if (two >= rub_2) 
         A -= rub_2 * 2;
     else
         A -= (rub_2 - two) * 2;
+
+    if (A == 0) {
+        cout << "YES";
+        return 0;
+    }
 
     int one = A / 1;
     if (one >= rub_1)
