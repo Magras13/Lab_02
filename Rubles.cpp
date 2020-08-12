@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
     int rub_5, rub_2, rub_1, A;
+    bool result = false;
 
     cout << "Input 5 rub quantity\n";
     cin >> rub_5;
@@ -14,37 +15,21 @@ int main() {
     cout << "Input what you need collect\n";
     cin >> A;
 
-    int five = A / 5;
-    if (five >= rub_5)
-        A -= rub_5 * 5;
-    else
-        A -= (rub_5 - five) * 5;
-
-    if (A == 0) {
-        cout << "YES";
-        return 0;
+    for (int i = 0; i <= rub_5; i++)
+    {
+        for (int j = 0; j <= rub_2; j++)
+        {
+            for (int k = 0; k <= rub_1; k++)
+            {
+                if (i * 5 + j * 2 + k == A)
+                {
+                    result = true;
+                }
+            }
+        }
     }
-        
-    int two = A / 2;
-    if (two >= rub_2) 
-        A -= rub_2 * 2;
-    else
-        A -= (rub_2 - two) * 2;
-
-    if (A == 0) {
-        cout << "YES";
-        return 0;
-    }
-
-    int one = A / 1;
-    if (one >= rub_1)
-        A -= rub_1 * 1;
-    else
-        A -= (rub_1 - one) * 1;
-
-    if (A == 0)
+    if (result == true)
         cout << "YES";
     else
         cout << "NO";
-
 }
