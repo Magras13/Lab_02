@@ -25,7 +25,7 @@ int main() {
                 {
                     res_5 = i;
                     res_2 = j;
-                    rex_3 = k;
+                    res_1 = k;
                     result = true;
                 }
             }
